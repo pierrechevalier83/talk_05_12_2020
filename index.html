@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DevFest Syberia</title>
+    <meta charset="utf-8">
+    <style>
+	body {
+        font-family: 'Hack Nerd Font Mono';
+        color: black;
+        max-width: 90%;
+      }
+	  
+	  h1, h2 {
+        font-family: 'Hack Nerd Font Mono';
+        max-width: 95%;
+      }
+      h3 {
+        font-family: 'Hack Nerd Font Mono';
+        max-width: 90%;
+      }
+      .remark-code, .remark-inline-code {
+        font-family: 'Hack Nerd Font Mono';
+        width: 100%;
+      }
+      .black_text {
+        color: black;
+        max-width: 90%;
+      }
+      .gray_text {
+        color: gray;
+        max-width: 90%;
+      }
+      .red_text {
+        color: #C14566;
+        max-width: 90%;
+      }
+      .white_text {
+        color: white;
+        max-width: 90%;
+      }
+      .remark-code-line-highlighted {
+         background-color: purple;
+      }
+      .remark-code-span-highlighted {
+         background-color: #f0572a;
+      }
+      .fitted-pic img {
+        height: auto;
+        width: auto;
+        position: center;
+        max-height: 500px;
+        max-width: 100%;
+      }
+      .small-pic img {
+        height: auto;
+        width: auto;
+        max-height: 100px;
+        max-width: 350px;
+      }
+      .tiny-pic img {
+        height: auto;
+        width: auto;
+        max-height: 35px;
+        max-width: 35px;
+      }
+      .logo img {
+        height: auto;
+        width: auto;
+        max-height: 35px;
+        position: absolute;
+        top: 8%;
+        left: 1.7%;
+      }
+      .left-column50 {
+        width: 50%;
+        float: left;
+      }
+      .right-column50 {
+        width: 50%;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+layout: true
+name: white
+class: black_text
+background-color: white
+
+---
+layout: true
+name: gray
+class: white_text
+background-color: #454C52
+
+---
+layout: true
+name: red
+class: white_text
+background-color: #C14566
+
+---
+layout: true
+name: green
+class: white_text
+background-color: #398277
+
+---
+layout: true
+name: purple
+class: white_text
+background-color: #403D58
+
+---
+layout: true
+name: yellow
+class: black_text
+background-color: #FFD45E
+
+---
+layout: true
+name: blue
+class: white_text
+background-color: #4299bf
+
+---
+template: white
+# Creating the Ferris keyboard
+<br>
+<br>
+### A journey through the world of hobbyist mechanical keyboards
+<br>
+<br>
+#### .gray_text[Pierre Chevalier, Software Engineer, Tooling at Twitter]
+#### .gray_text[ @pierrec83]
+#### .gray_text[ﭮ pierrec#0083]
+#### .gray_text[ pierrechevalier83]
+???
+Hi, I'm Pierre. I'm a Software Engineer at Twitter.
+
+This year, I dove head first in the world of mechanical keyboards and some really interesting things happened.
+
+I would like to share with you some of the journey I've been on.
+
+Before I go much further, let me issue a disclaimer that all the work presented here was done in my spare time. My views and opinions are my own and I am not representing Twitter in this talk.
+
+---
+template: yellow
+# TL;DR
+
+.fitted-pic[![ferris_compact_glam](assets/images/ferris_compact_glam.jpg)]
+
+???
+Spoiler: it ends with me designing this keyboard that I named the Ferris, after the rust mascot.
+But let's step back and let me tell you how it got to that point.
+
+---
+template: gray
+# A year ago...
+<br><br>
+
+
+* Moderate interest in computer keyboards
+
+???
+A year ago, I would say I had a pretty typical relationship to my computer keyboard for a software engineer.
+I used a pretty "standard" mechanical keyboard: the filco majestouch, with Cherry MX brown swiches.
+I used the qwerty layout and didn't know how to touch type, so my typing speeds hovered around 50 words per minute.
+
+
+--
+count:false
+
+* Never used a soldering iron
+
+* Never designed any hardware
+
+???
+I had never done any hardware related project, so I didn't know how to solder or how to design a PCB.
+--
+count:false
+
+* 🤍 Open-Source
+
+
+* 💙 KISS (Keep It Simple, Stupid)
+
+???
+I did love open-source, and in particular, the "keep it simple, stupid" philosophy of writing software in a minimalistic way.
+
+--
+count:false
+
+* 💚 Rust Programming Language
+
+???
+Rust was and still is my favourite programming language. In particular, I find its mascot, Ferris the crab to be adorable.
+
+--
+count:false
+
+* That one friend...
+
+???
+I had that one friend who was quite interested in mechanical keyboards and kept telling me about new keyboards he was getting.
+I didn't really get why he would need more than one.
+
+---
+template: red
+# Listening to that one friend
+<br><br>
+
+* FOSDEM 2020
+
+???
+In February, I met my friend in person at FOSDEM. That was before the travel restrictions in Europe started to get serious.
+
+--
+count: false
+* Kyria
+
+    * 50 keys
+    * Columnar stagger
+    * Split keyboard
+    * Extremely customizable (switches, keycaps, case, etc.)
+    * Do it yourself
+
+???
+
+He told me how he was getting a Kyria keybord which was a split, 50 keys keyboard with columnar stagger that you had to solder yourself.
+He explained how there were many axis of decisions when picking a keyboard and that there were many varieties of keyboards addressing most combinations one might want to experiment with.
+
+---
+template: green
+# Reading the docs
+
+.fitted-pic[![splitkb_doc](assets/images/splitkb_doc.png)]
+
+???
+
+My friend was passionate enough that he started seriously triggering my curiosity, so I spent a fair deal of time browsing the documentation from the website that sold the keyboard he was getting.
+
+That was my entrypoint in the world of custom keyboards.
+
+---
+template: purple
+# Initiation
+* Stagger
+    * Row stagger (typical)
+    * Ortholinear (no stagger: all keys are aligned in x and y)
+    * Columnar stagger (keys line up in columns and not in rows)
+
+???
+
+I learnt about the many design aspects that distinguish custom keyboards.
+One of them is the stagger, which describes how the keys are aligned.
+Traditionally, the keys line up in rows. That's called a row stagger.
+
+Some keyboards have all the keys lined up by row and column. That's called an ortholinear stagger.
+
+Some keyboards have the keys lined up by columns, with the columns at different heights. That's called a columnar stagger.
+
+--
+count: false
+
+* Number of keys
+    * 100% (all keys, about 100 of them)
+    * TKL-80% (Ten Key Less: remove the number pad. Around 80-90 keys)
+    * 60% (Remove the function row and the arrow keys)
+    * 40% (Remove the number row. Mostly just alpha keys and a few modifiers)
+
+???
+
+Typical keyboards have about a hundred keys including function keys, the number row, arrow keys and the number pad.
+The assumption is that most keys can be accessed with one strike, but it may be difficult to reach some of these keys while touch typing.
+
+Other designs use less and less keys so that the fingers don't need to move far away from their home positions. To keep everything accessible, the user can use combination of keys to access non-alpha functions like a number pad.
+
+--
+count: false
+
+* Keycaps
+    * Many profiles
+    * Different textures
+--
+count: false
+
+* Switches
+    * Feel: clicky, tactile, linear
+    * Profile: high profile, low profile
+    * Brand: Cherry MX, Kailh, Gateron,...
+    * Modding: spring swapping, lubing, ...
+
+???
+Keycaps and swiches come in many flavours and can strongly influence the feel of a keyboard.
+---
+count:false
+template: purple
+# Initiation
+
+* Firmware
+    * QMK firmware: fully configurable, GPL-licensed firmwa:re
+    * ZMK (supports bluetooth keyboards)
+    * More niche options
+
+???
+There are many options for the firmware, although QMK is by far the most common and supports most custom keyboards under the sun.
+
+It is written in C and allows the user to modify about every aspect of how their keyboard behaves.
+--
+count:false
+
+* Keymaps
+    * Alpha layout (qwerty, dvorak, coleman, coleman-DH, workman, rsthd, ...)
+    * Layers
+    * Combos
+
+???
+Almost every custom keyboard user uses their own keyboard keymap.
+There is a large variety of base layouts to choose from, starting from the most famous ones to lesser known options.
+
+The part that is very personal is how everyone lays out the layers so they can access numbers, function keys, symbols, arrow keys etc.
+
+--
+count:false
+
+* ...
+
+???
+The list goes on
+
+---
+template:purple
+count:false
+# Intiation
+
+.fitted-pic[![bomtarnes_collection](assets/images/bomtarnes_collection.jpeg)]
+"Gotta catch em all (late 2020 edition)" by u/bomtarnes
+
+???
+This picture should give you a hint at the wide variety that there is out there. Shout out to bomtarnes from the MechanicalKeyboards subreddit who allowed me to use this picture of their collection to make this point.
+
+---
+template:blue
+# The point of no-return
+<br>
+### If I accept a steep learning curve, what does the optimal keyboard for me look like?
+<br>
+???
+As I learnt about all these design aspects, I started realizing that the most common keyboards that we are used to are mostly as they are due to legacy reasons.
+
+I started considering seriously what would be a perfect keyboard for me if I was willing to accept to totally relearn how to type.
+
+--
+count: false
+
+* Split, columnar stagger
+
+???
+By reading about it, I convinced myself that a split keyboard would allow a more natural typing position as the halves can be positionned near shoulder width and the angle can be adjusted to keep the wrist's straight.
+
+Columnar stagger made sense to me too as I had trouble trying to reach some keys like "b" and "y" when trying to touch type on a normal keyboard.
+
+--
+count: false
+
+* 50 keys or less (with smart use of layers)
+
+???
+I was also convinced that having less keys to reduce the overall finger travel would make touch typing easier.
+
+--
+count: false
+
+* Workman layout (heavy use of the homerow, reduced side-index travel)
+
+???
+From reading about the most common keyboard layouts, I thought workman was a good fit for me as there was an emphasis on reducing side motion for the fingers which sounded comfortable to me.
+
+
+--
+count: false
+
+* Switches, keycaps... Need experimentation
+
+???
+As I hadn't tried many switches and keycaps, I decided that I should try a few varieties before knowing what was good for me. For that reason, I decided that having the ability to hotswap the keys on my keyboard was important for me.
+---
+template:white
+# Waiting for my Kyria
+
+.fitted-pic[![learn_soldering](assets/images/learn_soldering.jpg)]
+
+???
+So I ordered a Kyria keyboard. There was a waiting time of about two months between ordering and receiving my kit, so I used the time to start learning touch typing in the workman layout on specialized websites.
+
+I ordered a soldering kit and also a cheap pcb kit to practice my soldering before getting the keyboard.
+---
+count:false
+template:white
+# Waiting for my Kyria
+
+.fitted-pic[![first_soldering](assets/images/first_soldering.jpg)]
+
+???
+That was surprisingly easier than I had expected. I was able to get all the LEDs to blink, which gave me some confidence.
+
+---
+template: yellow
+# Getting the Kyria
+.fitted-pic[![kyria_package](assets/images/kyria_package.jpg)]
+
+???
+Eventually, my box arrived and I got to assemble my first keyboard.
+
+---
+template: yellow
+count: false
+# Getting the Kyria
+.fitted-pic[![kyria_soldering](assets/images/kyria_soldering.jpg)]
+
+???
+I assembled the keyboard, which was quite approachable as the process is very well documented on the vendor's website.
+---
+template: yellow
+count: false
+# Getting the Kyria
+.fitted-pic[![kyria_right_hand](assets/images/kyria_right_hand.jpg)]
+
+???
+A short time later, I had a new toy. My typing speeds reduced to around 20 words per minute, but I started using it and improving the layout as I went.
+---
+template: gray
+#kyria_right_hand
+
+
+---
+template: red
+#kyria_soldering
+.fitted-pic[![kyria_soldering](assets/images/kyria_soldering.jpg)]
+
+
+---
+template: green
+#gherkin_pcbs
+.fitted-pic[![gherkin_pcbs](assets/images/gherkin_pcbs.jpg)]
+
+
+---
+template: purple
+#soldering_gherkin
+.fitted-pic[![soldering_gherkin](assets/images/soldering_gherkin.jpg)]
+
+---
+template: white
+#backlit_gherkin
+.fitted-pic[![backlit_gherkin](assets/images/backlit_gherkin.jpg)]
+
+
+---
+template: white
+#printed_keymap
+.fitted-pic[![printed_keymap](assets/images/printed_keymap.jpg)]
+
+
+---
+template: white
+#two_gherkins
+.fitted-pic[![two_gherkins](assets/images/two_gherkins.jpg)]
+
+
+---
+template: white
+#rough_wristrest
+.fitted-pic[![rough_wristrest](assets/images/rough_wristrest.jpg)]
+
+
+---
+template: white
+#sanded_wristrests
+.fitted-pic[![sanded_wristrests](assets/images/sanded_wristrests.jpg)]
+
+
+---
+template: white
+#linseed_oil
+.fitted-pic[![linseed_oil](assets/images/linseed_oil.jpg)]
+
+
+---
+template: white
+#polished_wristrest
+.fitted-pic[![polished_wristrest](assets/images/polished_wristrest.jpg)]
+
+
+---
+template: white
+#gat_yellows
+.fitted-pic[![gat_yellows](assets/images/gat_yellows.jpg)]
+
+
+---
+template: white
+#kyria_workstation
+.fitted-pic[![kyria_workstation](assets/images/kyria_workstation.jpg)]
+
+
+---
+template: white
+#sexy_kyria_with_wristrests
+.fitted-pic[![sexy_kyria_with_wristrests](assets/images/sexy_kyria_with_wristrests.jpg)]
+
+
+---
+template: white
+#early_pcb_design
+.fitted-pic[![early_pcb_design](assets/images/early_pcb_design.jpg)]
+
+
+---
+template: white
+#park_pcb_design
+.fitted-pic[![park_pcb_design](assets/images/park_pcb_design.jpg)]
+
+
+---
+template: white
+#ferris_design_evolution_0
+.fitted-pic[![ferris_design_evolution_0](assets/images/ferris_design_evolution_0.jpg)]
+
+
+---
+template: white
+#ferris_design_evolution_1
+.fitted-pic[![ferris_design_evolution_1](assets/images/ferris_design_evolution_1.jpg)]
+
+
+---
+template: white
+#ferris_design_evolution_2
+.fitted-pic[![ferris_design_evolution_2](assets/images/ferris_design_evolution_2.jpg)]
+
+
+---
+template: white
+#ferris_design_evolution_3
+.fitted-pic[![ferris_design_evolution_3](assets/images/ferris_design_evolution_3.jpg)]
+
+
+---
+template: white
+#jlcpcb
+.fitted-pic[![jlcpcb](assets/images/jlcpcb.jpg)]
+
+
+---
+template: white
+#ferris_pcbs
+.fitted-pic[![ferris_pcbs](assets/images/ferris_pcbs.jpg)]
+
+
+---
+template: white
+#ferris_components
+.fitted-pic[![ferris_components](assets/images/ferris_components.jpg)]
+
+
+---
+template: white
+#soldered_ferris
+.fitted-pic[![soldered_ferris](assets/images/soldered_ferris.jpg)]
+
+
+---
+template: white
+#trello
+.fitted-pic[![trello](assets/images/trello.jpg)]
+
+
+---
+template: white
+#assembled_ferris
+.fitted-pic[![assembled_ferris](assets/images/assembled_ferris.jpg)]
+
+
+---
+template: white
+#ferris_wheel
+.fitted-pic[![ferris_wheel](assets/images/ferris_wheel.jpg)]
+
+
+---
+template: white
+#ferris_glam_0
+.fitted-pic[![ferris_glam_0](assets/images/ferris_glam_0.jpg)]
+
+
+---
+template: white
+#ferris_glam_1
+.fitted-pic[![ferris_glam_1](assets/images/ferris_glam_1.jpg)]
+
+
+---
+template: white
+#more_ferris_pcbs
+.fitted-pic[![more_ferris_pcbs](assets/images/more_ferris_pcbs.jpg)]
+
+
+---
+template: white
+#ferris_high_pcbs
+.fitted-pic[![ferris_high_pcbs](assets/images/ferris_high_pcbs.jpg)]
+
+
+---
+template: white
+#ferris_low_pcbs
+.fitted-pic[![ferris_low_pcbs](assets/images/ferris_low_pcbs.jpg)]
+
+
+---
+template: white
+#packaging
+.fitted-pic[![packaging](assets/images/packaging.jpg)]
+
+
+---
+template: white
+#many_boms
+.fitted-pic[![many_boms](assets/images/many_boms.jpg)]
+
+
+---
+template: white
+#ferris_pads
+.fitted-pic[![ferris_pads](assets/images/ferris_pads.jpg)]
+
+
+---
+template: white
+#boxes
+.fitted-pic[![boxes](assets/images/boxes.jpg)]
+
+
+---
+template: white
+#profiles
+.fitted-pic[![profiles](assets/images/profiles.jpg)]
+
+
+---
+template: white
+#more_components
+.fitted-pic[![more_components](assets/images/more_components.jpg)]
+
+
+---
+template: white
+#ferris_variants
+.fitted-pic[![ferris_variants](assets/images/ferris_variants.jpg)]
+
+
+---
+template: white
+#ferris_lubing
+.fitted-pic[![ferris_lubing](assets/images/ferris_lubing.jpg)]
+
+
+---
+template: white
+#ferris_compact_glam
+.fitted-pic[![ferris_compact_glam](assets/images/ferris_compact_glam.jpg)]
+
+
+---
+template: white
+#keebs_collection
+.fitted-pic[![keebs_collection](assets/images/keebs_collection.jpg)]
+
+
+---
+template: white
+#ferris_compact_and_base
+.fitted-pic[![ferris_compact_and_base](assets/images/ferris_compact_and_base.jpg)]
+
+
+---
+template: white
+#ferris_compact
+.fitted-pic[![ferris_compact](assets/images/ferris_compact.jpg)]
+
+
+---
+template: white
+#ferris_high
+.fitted-pic[![ferris_high](assets/images/ferris_high.jpg)]
+
+
+---
+template: white
+#ferris_low
+.fitted-pic[![ferris_low](assets/images/ferris_low.jpg)]
+
+
+---
+template: white
+#ferris_back
+.fitted-pic[![ferris_back](assets/images/ferris_back.jpg)]
+
+
+---
+template: white
+#ferris_high_back
+.fitted-pic[![ferris_high_back](assets/images/ferris_high_back.jpg)]
+
+
+---
+template: white
+#ferris_low_back
+.fitted-pic[![ferris_low_back](assets/images/ferris_low_back.jpg)]
+
+
+---
+template: white
+#origami
+.fitted-pic[![origami](assets/images/origami.jpg)]
+
+
+---
+template: white
+#ferris_bling
+.fitted-pic[![ferris_bling](assets/images/ferris_bling.jpg)]
+
+
+
+
+---
+template: white
+# 🧐 Any question?
+
+<br><br>
+.center[
+.small-pic[![rust](assets/images/ferris.png)]
+<br><br>
+# Thank you!
+<br>
+#### .gray_text[https://github.com/pierrechevalier83/talk_24_09_2019]
+
+]
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({
+		ratio: '16:9',
+        highlightLanguage: 'rust',
+        highlightLines: 'true',
+        highlightSpans: 'true'
+	  });
+    </script>
+  </body>
+</html>
+
