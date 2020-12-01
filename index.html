@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DevFest Syberia</title>
+    <title>Birth of the Ferris keyboard</title>
     <meta charset="utf-8">
     <style>
 	body {
@@ -48,6 +48,7 @@
         height: auto;
         width: auto;
         position: center;
+		float: center;
         max-height: 500px;
         max-width: 100%;
       }
@@ -127,7 +128,7 @@ background-color: #4299bf
 
 ---
 template: white
-# Creating the Ferris keyboard
+# Birth of the Ferris keyboard
 <br>
 <br>
 ### A journey through the world of hobbyist mechanical keyboards
@@ -377,7 +378,7 @@ count: false
 * Workman layout (heavy use of the homerow, reduced side-index travel)
 
 ???
-From reading about the most common keyboard layouts, I thought workman was a good fit for me as there was an emphasis on reducing side motion for the fingers which sounded comfortable to me.
+From reading about the most common keyboard layouts, I thought workman was a good fit for me as there was an emphasis on reducing side motion for the index fingers which sounded comfortable to me.
 
 
 --
@@ -431,325 +432,498 @@ count: false
 
 ???
 A short time later, I had a new toy. My typing speeds reduced to around 20 words per minute, but I started using it and improving the layout as I went.
+
+---
+template: yellow
+count: false
+# Getting the Kyria
+
+.fitted-pic[![sanded_wristrests](assets/images/sanded_wristrests.jpg)]
+???
+I carved myself a couple of wrist rests from a log of wood I picked up in a park
+
+---
+template: yellow
+count: false
+# Getting the Kyria
+.fitted-pic[![sexy_kyria_with_wristrests](assets/images/sexy_kyria_with_wristrests.jpg)]
+
+???
+And there was the most comfortable keyboard setup I had ever used.
+
+It took some time to get used to it and to get to typing at comfortable speeds, partly because I also changed layout to workman from qwerty, but the comfort gains were instant and dramatically noticeable.
+
+---
+template: yellow
+count:false
+# Getting the Kyria
+.fitted-pic[![kyria_workstation](assets/images/kyria_workstation.jpg)]
+
+???
+Notice that I also stopped using a separate mouse as I switched to using another layer on the keyboard for moving the cursor with the same finger placement used for the arrow keys.
+
 ---
 template: gray
-#kyria_right_hand
+# Lessons learnt
 
+* Inherent simplicity of a keyboard
+
+???
+As my first experience of using a custom keyboard, I learnt a few things.
+First of all, by building the keyboard myself, I got a first hand experience at how simple a keyboard actually is:
+A printed circuit board, a few components to solder on top of it, a bit of fimware and voila. It's a functional keyboard.
+
+Everything came in a kit, and with detailed documentation, which made the process of assembling the keyboard much easier than it may seem.
+
+--
+count: false
+
+* Keymap optimization
+
+???
+Once I had swiched to the Kyria as my daily driver, I started iterating very frequently on the keymap I used and I also learnt some lessons here. First of all, I noticed that using layers, a high number of keys was not needed and indeed, using the same fingers closer to their home position most of the time was actually beneficial over moving the fingers further away. For that reason, 50 keys started to look like more than what's actually necessary for a comfortable experience.
+
+--
+count: false
+
+* All the features
+
+	* Rotary encoders
+	* RGB backlight
+	* OLED displays
+	* Case
+	* Hotswappable switches
+	* Support for different types of switches
+???
+By design, the Kyria supports many features of custom mechanical keyboards, so I got to play with each of them and get a feel for what they brought to the experience of using the keyboard.
+
+--
+count: false
+
+* Not a cheap endeavour (~350$ total)
+???
+I also realized that opting in all the features had a financial cost as the keyboard total cost me between 300 and 400 dollars
 
 ---
 template: red
-#kyria_soldering
-.fitted-pic[![kyria_soldering](assets/images/kyria_soldering.jpg)]
+# Exploring further
+.fitted-pic[![gherkin_pcbs](assets/images/gherkin_pcbs.jpg)]
 
+???
+Having realized how little there was to building a keyboard, I was interested to try a more hands-on experience.
+
+I took an open-source design that I liked for its simplicity: the gherkin, which is a 30 key ortholinear keyboard and decided to kit a few myself to get comfortable with the entire process.
+
+I had some PCBs printed from jlcpcb, a chineese website.
+
+---
+template: red
+count: false
+# Exploring further
+.fitted-pic[![soldering_gherkin](assets/images/soldering_gherkin.jpg)]
+
+???
+I sourced the components from very cheap websites such as Ali Express and assembled a few of them
+
+---
+template: red
+count: false
+# Exploring further
+.fitted-pic[![backlit_gherkin](assets/images/backlit_gherkin.jpg)]
+
+???
+Soon enough, I had myself an ortholinear keyboard with only 30 keys to play with.
+
+---
+template: red
+count: false
+# Exploring further
+
+.fitted-pic[![two_gherkins](assets/images/two_gherkins.jpg)]
+
+???
+In fact, I had a few, and splitting an order for 10 keyboards with a friend, the entire thing had cost me only about $120 for 5 keyboards.
+I used them to experiment with different switches and keycaps.
 
 ---
 template: green
-#gherkin_pcbs
-.fitted-pic[![gherkin_pcbs](assets/images/gherkin_pcbs.jpg)]
+# More lessons learnt
+<br><br>
 
+* No magic
+
+???
+At this stage, there was no magic for me to kitting a keyboard. I had been through the entire process from end-to-end and realized that there was nothing inherently difficult in it if one was patient enough to wait for parts.
+
+--
+count: false
+
+* The right size
+
+???
+Having had time to perfect my keymaps for the gherkin and the Kyria, I realized that 30 keys was usable, but not quite comfortable as dedicated thumb keys are quite nice. 50 keys was more than necessary, and in fact more than comfortable as it incurred too much travel. The sweetspot for me was in between.
+
+--
+count: false
+* Stagger
+
+???
+Comparing the Kyria and the gherkin, the Kyria was much more comfortable to use, mainly due to the pronounced columnar stagger.
+
+--
+count: false
+* Costs
+
+???
+Another lesson I learnt was that printing a custom PCB is actually quite affordable, so the main component to a custom keyboard cost are how many features it has (meaning more components must be used) and how many keys it has.
+
+--
+count: false
+
+* Stronger together
+
+???
+I also loved that the gherkin design was open-source, which meant I didn't need to ask for anyone's permission to print a few and experiment with it.
 
 ---
 template: purple
-#soldering_gherkin
-.fitted-pic[![soldering_gherkin](assets/images/soldering_gherkin.jpg)]
+# What if?
+<br>
+### If I was willing to invest the time in learning about PCB design, what would the optimal keyboard for me look like?
+<br>
+???
+As I now understood what it took to go from an existing PCB design to 
+an actual usable keyboard, even without the help of a vendor selling a ready to build kit, I started wondering what I would do if I magically could design my own PCB.
+
+--
+count: false
+
+* Open-source, simple, low-cost, portable as a gherkin
+
+* Comfortable as a Kyria
+
+???
+Could I design a keyboard that would be as cheap and simple as a gherkin while being as comfortable as a Kyria?
+
+---
+template: blue
+# The concept
+<br><br>
+
+???
+As I considered this question, it became very clear in my mind what I would need to do.
+
+
+--
+count: false
+
+* Same key positions as the Kyria
+
+???
+By borrowing the column stagger from the Kyria, I could get a similar amount of comfort
+
+--
+count: false
+
+* Remove all keys that are "hard to reach" (opinion)
+
+???
+By removing all the keys that are further from the home position, I could even make the layout more comfortable than on the Kyria.
+
+This relies on the user being comfortable with more complex keymaps, which looses some mass-appeal, but the aim was just to make a perfect keyboard for me, not a commercial success
+
+--
+count: false
+
+* Remove all features (*)
+  * That the user doesn't want
+  * From any single PCB design
+
+???
+To lower the costs, and in the spirit of the KISS philosophy, any board could be designed with the absolute minimal number of feature the user of the keyboard wanted.
+
+This should lead to a design that is so simple that a user particularly interested in any given feature could in theory easily re-use the design and modify it to achieve their own goals.
 
 ---
 template: white
-#backlit_gherkin
-.fitted-pic[![backlit_gherkin](assets/images/backlit_gherkin.jpg)]
+# Design
 
-
----
-template: white
-#printed_keymap
-.fitted-pic[![printed_keymap](assets/images/printed_keymap.jpg)]
-
-
----
-template: white
-#two_gherkins
-.fitted-pic[![two_gherkins](assets/images/two_gherkins.jpg)]
-
-
----
-template: white
-#rough_wristrest
-.fitted-pic[![rough_wristrest](assets/images/rough_wristrest.jpg)]
-
-
----
-template: white
-#sanded_wristrests
-.fitted-pic[![sanded_wristrests](assets/images/sanded_wristrests.jpg)]
-
-
----
-template: white
-#linseed_oil
-.fitted-pic[![linseed_oil](assets/images/linseed_oil.jpg)]
-
-
----
-template: white
-#polished_wristrest
-.fitted-pic[![polished_wristrest](assets/images/polished_wristrest.jpg)]
-
-
----
-template: white
-#gat_yellows
-.fitted-pic[![gat_yellows](assets/images/gat_yellows.jpg)]
-
-
----
-template: white
-#kyria_workstation
-.fitted-pic[![kyria_workstation](assets/images/kyria_workstation.jpg)]
-
-
----
-template: white
-#sexy_kyria_with_wristrests
-.fitted-pic[![sexy_kyria_with_wristrests](assets/images/sexy_kyria_with_wristrests.jpg)]
-
-
----
-template: white
-#early_pcb_design
 .fitted-pic[![early_pcb_design](assets/images/early_pcb_design.jpg)]
-
+???
+I started following an online tutorial on PCB design. My vision for was I wanted was extremely clear: a keyboard that only types, with the keys in a certain position. 
 
 ---
 template: white
-#park_pcb_design
+count: false
+# Design
 .fitted-pic[![park_pcb_design](assets/images/park_pcb_design.jpg)]
 
+???
+I used every spare moment I had to progress the design
 
 ---
 template: white
-#ferris_design_evolution_0
+count: false
+# Design
 .fitted-pic[![ferris_design_evolution_0](assets/images/ferris_design_evolution_0.jpg)]
-
+???
+Until eventually, I had what looked to me like a viable draft.
 
 ---
 template: white
-#ferris_design_evolution_1
+count: false
+# Design
 .fitted-pic[![ferris_design_evolution_1](assets/images/ferris_design_evolution_1.jpg)]
 
+???
+I iterated on the design a little bit, simplifying the lines
 
 ---
 template: white
-#ferris_design_evolution_2
+count: false
+# Design
+
 .fitted-pic[![ferris_design_evolution_2](assets/images/ferris_design_evolution_2.jpg)]
 
-
+???
+I even changed my mind on the number of keys and removed a thumb key from each hand as the design could look more minimalistic
 ---
 template: white
-#ferris_design_evolution_3
+count: false
+# Design
 .fitted-pic[![ferris_design_evolution_3](assets/images/ferris_design_evolution_3.jpg)]
 
-
+???
+Until I finalized on a design I was happy with: it was about as simple as I could make it.
 ---
-template: white
-#jlcpcb
+template: yellow
+# First order
 .fitted-pic[![jlcpcb](assets/images/jlcpcb.jpg)]
 
+???
+By that time, I had become somewhat active on a few discord servers related to custom mechanical keyboards.
+
+Before I placed an order for PCBs, I asked for help and had some community members review my design.
+
+They helped me identify a few problems that I could fix before ordering a first print.
 
 ---
-template: white
-#ferris_pcbs
+template: yellow
+count: false
+# First order
+
 .fitted-pic[![ferris_pcbs](assets/images/ferris_pcbs.jpg)]
 
+???
+I eventually received my first 5 Ferris PCBs. I had added some artwork to tie the keyboard to its name. I really liked how it came out, with a small copper pad visible at the front of the PCB and larger drawings on the silkscreen on the backside.
 
 ---
-template: white
-#ferris_components
+template: yellow
+count: false
+# First order
 .fitted-pic[![ferris_components](assets/images/ferris_components.jpg)]
 
+???
+I also received all of the components. Having kitted the gherkins earlier, I had gained a bit of experience in sourcing components, so this process wasn't too scary.
 
 ---
-template: white
-#soldered_ferris
+template: yellow
+count: false
+# First order
 .fitted-pic[![soldered_ferris](assets/images/soldered_ferris.jpg)]
 
+???
+I got to assemble the first ever Ferris keyboard, and to write some firmware to make it  a working keyboard.
+
+I wrote the firmware using QMK, which means that I could mostly write high level C code with all the business logic being handled by the QMK project itself.
+
+It also meant that anyone using this keyboard could use the same firmware they were probably already familiar with.
 
 ---
-template: white
-#trello
-.fitted-pic[![trello](assets/images/trello.jpg)]
-
-
----
-template: white
-#assembled_ferris
+template: yellow
+count: false
+# First order
 .fitted-pic[![assembled_ferris](assets/images/assembled_ferris.jpg)]
 
+???
+Soon enough, I had my new daily driver keyboard.
+It was minimalistic, with only the exposed PCB, the electronic circuit and the switches.
+All the switches were positioned to a place where they were easy to reach.
+It was the most comfortable keyboard I had ever used.
 
 ---
-template: white
-#ferris_wheel
+template: gray
+# Selling the extras
 .fitted-pic[![ferris_wheel](assets/images/ferris_wheel.jpg)]
 
+???
+When one orders PCBs and components, there is generally a minimum order quantity of 5, so after building my own keyboard, I had a few more kits on my hands.
 
 ---
-template: white
-#ferris_glam_0
+template: gray
+count: false
+# Selling the extras
 .fitted-pic[![ferris_glam_0](assets/images/ferris_glam_0.jpg)]
 
+???
+I took a few glam shots of my new keyboard
 
 ---
-template: white
-#ferris_glam_1
+template: gray
+count: false
+# Selling the extras
 .fitted-pic[![ferris_glam_1](assets/images/ferris_glam_1.jpg)]
 
+???
+And shared them online in some of the custom keyboard channels that I had started to frequent.
+
+I found my first 4 clients quite rapidly and shipped them the kits.
 
 ---
-template: white
-#more_ferris_pcbs
+template: red
+# Popular demand
+
 .fitted-pic[![more_ferris_pcbs](assets/images/more_ferris_pcbs.jpg)]
 
+???
+Since I had shared the pictures online, I had more and more people express interest in getting one, so I placed a larger order for PCBs
 
 ---
-template: white
-#ferris_high_pcbs
-.fitted-pic[![ferris_high_pcbs](assets/images/ferris_high_pcbs.jpg)]
+template: red
+count: false
+# Popular demand
 
-
----
-template: white
-#ferris_low_pcbs
-.fitted-pic[![ferris_low_pcbs](assets/images/ferris_low_pcbs.jpg)]
-
-
----
-template: white
-#packaging
-.fitted-pic[![packaging](assets/images/packaging.jpg)]
-
-
----
-template: white
-#many_boms
-.fitted-pic[![many_boms](assets/images/many_boms.jpg)]
-
-
----
-template: white
-#ferris_pads
-.fitted-pic[![ferris_pads](assets/images/ferris_pads.jpg)]
-
-
----
-template: white
-#boxes
-.fitted-pic[![boxes](assets/images/boxes.jpg)]
-
-
----
-template: white
-#profiles
-.fitted-pic[![profiles](assets/images/profiles.jpg)]
-
-
----
-template: white
-#more_components
 .fitted-pic[![more_components](assets/images/more_components.jpg)]
 
 
+???
+and for components
+
 ---
-template: white
-#ferris_variants
+template: red
+count: false
+# Popular demand
+
+.fitted-pic[![packaging](assets/images/packaging.jpg)]
+
+???
+Because I cared and wanted to give joy to people receiving their keyboards, I designed a packaging system aiming to give a nice unboxing experience.
+
+---
+template: red
+count: false
+# Popular demand
+
+.fitted-pic[![many_boms](assets/images/many_boms.jpg)]
+
+???
+I started kitting all these keyboards people wanted to buy from me.
+
+---
+template: red
+count: false
+# Popular demand
+
+.fitted-pic[![boxes](assets/images/boxes.jpg)]
+
+???
+And prepared everyone's packages with love and care.
+
+---
+template: green
+# Vox populi
+
+.fitted-pic[![ferris_pads](assets/images/ferris_pads.jpg)]
+
+???
+People online loved the minimalistic design, but some of them started to ask for a different feature set.
+
+For example. People were interested in lower profile or higher profile switches.
+
+In the spirit of my initial minimalistic ideals, instead of adding more options to the board I had designed, I created variants of the design to accomodate for differrent taste.
+
+I was already starting to benefit from the choice of going open-source too as the community helped me design some of these variants.
+
+---
+template: green
+count: false
+# Vox populi
+
+.fitted-pic[![profiles](assets/images/profiles.jpg)]
+
+???
+And this is how the first two Ferris variants: Ferris High and Ferris Low came to be.
+
+---
+template: purple
+# Meet the Ferris family
 .fitted-pic[![ferris_variants](assets/images/ferris_variants.jpg)]
 
+???
+Today, I designed 8 variants of the Ferris keyboard. 4 of them have already been printed and assembled. I am working on finalizing four new variants.
+
+Since the entire design is open-source, there are already at least two variants that others have designed, and a few more in the works.
 
 ---
-template: white
-#ferris_lubing
-.fitted-pic[![ferris_lubing](assets/images/ferris_lubing.jpg)]
-
-
----
-template: white
-#ferris_compact_glam
-.fitted-pic[![ferris_compact_glam](assets/images/ferris_compact_glam.jpg)]
-
-
----
-template: white
-#keebs_collection
-.fitted-pic[![keebs_collection](assets/images/keebs_collection.jpg)]
-
-
----
-template: white
-#ferris_compact_and_base
-.fitted-pic[![ferris_compact_and_base](assets/images/ferris_compact_and_base.jpg)]
-
-
----
-template: white
-#ferris_compact
-.fitted-pic[![ferris_compact](assets/images/ferris_compact.jpg)]
-
-
----
-template: white
-#ferris_high
-.fitted-pic[![ferris_high](assets/images/ferris_high.jpg)]
-
-
----
-template: white
-#ferris_low
-.fitted-pic[![ferris_low](assets/images/ferris_low.jpg)]
-
-
----
-template: white
-#ferris_back
-.fitted-pic[![ferris_back](assets/images/ferris_back.jpg)]
-
-
----
-template: white
-#ferris_high_back
-.fitted-pic[![ferris_high_back](assets/images/ferris_high_back.jpg)]
-
-
----
-template: white
-#ferris_low_back
-.fitted-pic[![ferris_low_back](assets/images/ferris_low_back.jpg)]
-
-
----
-template: white
-#origami
-.fitted-pic[![origami](assets/images/origami.jpg)]
-
-
----
-template: white
-#ferris_bling
-.fitted-pic[![ferris_bling](assets/images/ferris_bling.jpg)]
-
-
-
-
----
-template: white
-# 🧐 Any question?
-
+template: blue
+# Yet more lessons learnt
 <br><br>
-.center[
-.small-pic[![rust](assets/images/ferris.png)]
+
+* The power of open-source
+
+???
+In this entire experience, I've been in touch with other custom keyboards enthusiasts, mostly on discord.
+We shared perspectives on all kinds of aspects from keyboard design to keymaps.
+Some people have helped me learn about electronic circuits.
+Some have designed 3d printed cases for it.
+Some have contributed new designs inspired by the Ferris.
+Some have sourced the components and PCBs for themselves.
+
+---
+template: blue
+count: false
+# Yet more lessons learnt
 <br><br>
-# Thank you!
+
+* The power of open-source
+
+* Labour of love
+
+???
+While I was very lucky to find like-minded people who were willing to buy kyeboard kits from me, and I made sure to cover my costs with the keyboards I sold, there is no way to describe this endeavour as profitable if you count the time I spent designing, iterating, documenting, packing kits etc.
+
+Like many open-source projects, I did it because I was passionate about learning more and more, and I was happy to share the results with people who would enjoy it.
+
+--
+count: false
+
+* The best keyboard for me
+
+???
+An important consideration is that I tried to design the best keyboard for me, and not a crowd-pleaser. That allowed me to keep the costs low and to stick to a minimalistic philosophy.
+
+I believe what came out of this approach is a great product for the few people who share my taste.
+
+--
+count: false
+
+* Evolution
+
+???
+As I have been having so much fun designing keyboards, the story of the Ferris doesn't end here. I am currently working on 4 variants of the keyboard based on a different chip architecture (I'm switching to arm).
+
+Eventually, I plan to write pure rust firmware to match the branding of the keyboard.
+
+---
+template: white
+# Thank you! Any questions?
+<br><br>
+#### .gray_text[ @pierrec83]
+#### .gray_text[ﭮ pierrec#0083]
+#### .gray_text[ pierrechevalier83]
 <br>
-#### .gray_text[https://github.com/pierrechevalier83/talk_24_09_2019]
-
-]
+#### .gray_text[github.com/pierrechevalier83/talk_05_12_2020]
+#### .gray_text[github.com/pierrechevalier83/ferris]
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
