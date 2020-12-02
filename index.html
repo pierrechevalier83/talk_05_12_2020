@@ -149,13 +149,16 @@ Before I go much further, let me issue a disclaimer that all the work presented 
 
 ---
 template: yellow
-# TL;DR
+# Demo time
 
 .fitted-pic[![ferris_compact_glam](assets/images/ferris_compact_glam.jpg)]
 
 ???
-Spoiler: it ends with me designing this keyboard that I named the Ferris, after the rust mascot.
-But let's step back and let me tell you how it got to that point.
+Today's talk is about the Ferris keyboard that I designed. Let's start with a 5 mind demonstration as images speak louder than words.
+
+*** Demo ***
+
+Now, let me bring you with me on the path that led us to this point.
 
 ---
 template: gray
@@ -230,7 +233,7 @@ count: false
 
 ???
 
-He told me how he was getting a Kyria keybord which was a split, 50 keys keyboard with columnar stagger that you had to solder yourself.
+He told me how he was getting a Kyria keybord which was a split, 50 keys keyboard with column stagger that you had to solder yourself.
 He explained how there were many axis of decisions when picking a keyboard and that there were many varieties of keyboards addressing most combinations one might want to experiment with.
 
 ---
@@ -247,11 +250,12 @@ That was my entrypoint in the world of custom keyboards.
 
 ---
 template: purple
-# Initiation
-* Stagger
-    * Row stagger (typical)
-    * Ortholinear (no stagger: all keys are aligned in x and y)
-    * Columnar stagger (keys line up in columns and not in rows)
+# Stagger
+<br><br>
+
+* Row stagger (typical)
+* Ortholinear (no stagger: all keys are aligned in x and y)
+* Columnar stagger (keys line up in columns and not in rows)
 
 ???
 
@@ -261,16 +265,44 @@ Traditionally, the keys line up in rows. That's called a row stagger.
 
 Some keyboards have all the keys lined up by row and column. That's called an ortholinear stagger.
 
-Some keyboards have the keys lined up by columns, with the columns at different heights. That's called a columnar stagger.
+Some keyboards have the keys lined up by columns, with the columns at different heights. That's called a column stagger.
 
---
+---
+template: purple
 count: false
+# Stagger: row stagger
+.fitted-pic[![leaf_80](assets/images/leaf_80.jpg)]
 
-* Number of keys
-    * 100% (all keys, about 100 of them)
-    * TKL-80% (Ten Key Less: remove the number pad. Around 80-90 keys)
-    * 60% (Remove the function row and the arrow keys)
-    * 40% (Remove the number row. Mostly just alpha keys and a few modifiers)
+???
+The Leaf 80 is an example of a row stagger. As you see, the rows are offset from each other in the common way.
+
+---
+template: purple
+count: false
+# Stagger: ortholinear
+.fitted-pic[![plum](assets/images/plum.jpg)]
+
+???
+The plum is an ortholinear keyboard. As you can see, both the rows and columns are lined up and there is no offset at all between them.
+
+---
+template: purple
+count: false
+# Stagger: column stagger
+.fitted-pic[![ergodash_mini](assets/images/ergodash_mini.jpg)]
+
+???
+The Ergodash Mini is an example of a keyboard with a column stagger. As you can see, it's also a split keyboard. It's most common for keyboards with a column stagger to be split as they are meant to be used with a slight angle or at shoulder width so your fingers can go straight up and down while lining up with your wrists.
+
+---
+template: blue
+# Size
+<br><br>
+
+* 100% (all keys, about 100 of them)
+* TKL-80% (Ten Key Less: remove the number pad. Around 80-90 keys)
+* 60% (Remove the function row and the arrow keys)
+* 40% (Remove the number row. Mostly just alpha keys and a few modifiers)
 
 ???
 
@@ -279,68 +311,125 @@ The assumption is that most keys can be accessed with one strike, but it may be 
 
 Other designs use less and less keys so that the fingers don't need to move far away from their home positions. To keep everything accessible, the user can use combination of keys to access non-alpha functions like a number pad.
 
---
+---
+template: blue
 count: false
-
-* Keycaps
-    * Many profiles
-    * Different textures
---
-count: false
-
-* Switches
-    * Feel: clicky, tactile, linear
-    * Profile: high profile, low profile
-    * Brand: Cherry MX, Kailh, Gateron,...
-    * Modding: spring swapping, lubing, ...
+# Size: 100%
+.fitted-pic[![ibm_model_m](assets/images/ibm_model_m.png)]
 
 ???
-Keycaps and swiches come in many flavours and can strongly influence the feel of a keyboard.
+The IBM Model M is an iconic example of a full size keybaord. As you can see, it has all the keys you would expect, including a numpad, an arrow clusteer, a function row and a numbers row.
 ---
-count:false
-template: purple
-# Initiation
+template: blue
+count: false
+# Size: TKL/80%
+.fitted-pic[![vortex_race3](assets/images/vortex_race3.jpg)]
 
-* Firmware
-    * QMK firmware: fully configurable, GPL-licensed firmwa:re
-    * ZMK (supports bluetooth keyboards)
-    * More niche options
+???
+The Vortex Race 3 is a Ten-Key-Less, or 80% keyboard. It removes the numberpad but keeps the arrow cluster, the function row and the number row. This format is still quite common, even in mainstream keyboards. For instance, it is very common on laptop keyboards where space comes at a premium.
+
+---
+template: blue
+count: false
+# Size: 60%
+.fitted-pic[![tartan](assets/images/tartan.jpg)]
+
+???
+The Tartan is a 60% keyboard: it doesn't have a function row.
+---
+template: blue
+count: false
+# Size: 40%
+.fitted-pic[![qaz](assets/images/qaz.jpg)]
+
+???
+The QAZ is a good example of a 40% keyboard. Is is roughly limited to the alpha keys and a few modifier keys.
+For keyboards of that size, it is necessary to rely on assigning different meaning to different keys when pressing on modifiers to be able to type numbers, symbols, access function keys etc.
+
+---
+template: white
+# Switches
+<br><br>
+
+* Feel: clicky, tactile, linear
+* Profile: high profile, low profile
+* PCB compatibility (Alps, MX, choc, choc mini, choc v2, ...)
+* Brand: Cherry MX, Kailh, Gateron,...
+* Modding: spring swapping, lubing, ...
+???
+Switches come in many flavours and can strongly influence the feel of a keyboard.
+Clickies make a distinct click sound when pressed.
+Tactile switches have a noticeable bump, generally signaling that the switch actuated.
+Linear switches have a smooth response: they feel the same for the entire key travel.
+
+There are various key profiles, from very low to higher.
+
+Many types of switches have a different PCB footprint, which means that a low profile switch can't be fitted in a high profile PCB except if the PCB designer made certain trade-offs in the design.
+
+Different manufacturers produce keys that have different characteristics, price points and levels of precision.
+
+Even given a specific switch, users can do their own modifications to alter the feel of the switch. For instance, it is very common to add some lubricant to smoothen out the travel of a key.
+
+---
+template: yellow
+# Keycaps
+<br><br>
+
+* Many profiles
+* Different textures
+* Legend
+
+???
+Keycaps also come in many shapes and textures and at a large range of price points. They can be legended or blanks.
+
+For smaller keyboards, most users tend to touch type and the keys have multiple meanings based on the layer that is activated, so it is more common to use blanks for these usecases.
+
+---
+template: gray
+# Firmware
+<br><br>
+
+* QMK firmware: fully configurable, GPL-licensed firmware
+* ZMK (supports bluetooth keyboards)
+* More niche options
 
 ???
 There are many options for the firmware, although QMK is by far the most common and supports most custom keyboards under the sun.
 
 It is written in C and allows the user to modify about every aspect of how their keyboard behaves.
---
-count:false
 
-* Keymaps
-    * Alpha layout (qwerty, dvorak, coleman, coleman-DH, workman, rsthd, ...)
-    * Layers
-    * Combos
+---
+template: red
+# Keymaps
+<br><br>
 
-???
-Almost every custom keyboard user uses their own keyboard keymap.
-There is a large variety of base layouts to choose from, starting from the most famous ones to lesser known options.
-
-The part that is very personal is how everyone lays out the layers so they can access numbers, function keys, symbols, arrow keys etc.
-
---
-count:false
-
-* ...
+* Alpha layout (qwerty, dvorak, coleman, coleman-DH, workman, rsthd, ...)
+* Layers
+* Combos
 
 ???
-The list goes on
+In the small custom mechanical keyboards world, keymaps are extremely personal.
+
+Users generally have their favourite alpha layout, be it qwerty or some other layout that may be more suited for speed or comfort.
+
+The part that is the most personal, though is how an individual decides to lay out all the other layers so they can access numbers, function keys, symbols, arrow keys etc.
+
+There isn't a standard per-se, and people tend to place each key meaning at a position that will make it easier for them to learn their layout.
+
+My own keymap evolved over a few months as I was getting used to small keyboards, and I moved symbols around to increase the comfort every time I noticed something I did often was hard to reach.
 
 ---
 template:purple
-count:false
-# Intiation
+# A world of options
 
 .fitted-pic[![bomtarnes_collection](assets/images/bomtarnes_collection.jpeg)]
 "Gotta catch em all (late 2020 edition)" by u/bomtarnes
 
 ???
+I only covered some of the aspects that differentiate mechanical keyboards.
+
+The list goes on, and for every combination of choices, there is likely to exist one or more keyboard that fill this niche.
+
 This picture should give you a hint at the wide variety that there is out there. Shout out to bomtarnes from the MechanicalKeyboards subreddit who allowed me to use this picture of their collection to make this point.
 
 ---
@@ -357,7 +446,7 @@ I started considering seriously what would be a perfect keyboard for me if I was
 --
 count: false
 
-* Split, columnar stagger
+* Split, column stagger
 
 ???
 By reading about it, I convinced myself that a split keyboard would allow a more natural typing position as the halves can be positionned near shoulder width and the angle can be adjusted to keep the wrist's straight.
@@ -568,7 +657,7 @@ count: false
 * Stagger
 
 ???
-Comparing the Kyria and the gherkin, the Kyria was much more comfortable to use, mainly due to the pronounced columnar stagger.
+Comparing the Kyria and the gherkin, the Kyria was much more comfortable to use, mainly due to the pronounced column stagger.
 
 --
 count: false
@@ -632,6 +721,22 @@ By removing all the keys that are further from the home position, I could even m
 
 This relies on the user being comfortable with more complex keymaps, which looses some mass-appeal, but the aim was just to make a perfect keyboard for me, not a commercial success
 
+--
+count: false
+
+* USB C
+
+???
+Using USB C to connect the keyboard to the computer was important to me as I strongly dislike micro-USB which is still quite standard in the world of custom keyboard.
+
+--
+count: false
+
+* Onboard components (no daughterboard)
+
+???
+I also wanted to have all the electronic components straight onto the PCB.
+Most existing designs, including the gherkin and the Kyria use a small daughterboard, which makes the keyboard easier to design and assemble, but daughterboards that support USB C are expensive and I prefer the aesthetic of one unified PCB with all the components straight on top of it.
 --
 count: false
 
@@ -860,7 +965,7 @@ template: purple
 .fitted-pic[![ferris_variants](assets/images/ferris_variants.jpg)]
 
 ???
-Today, I designed 8 variants of the Ferris keyboard. 4 of them have already been printed and assembled. I am working on finalizing four new variants.
+Today, I designed 8 variants of the Ferris keyboard. 4 of them have already been printed and assembled. They are the variants I demo-ed at the begining of this talk. I am working on finalizing four new variants.
 
 Since the entire design is open-source, there are already at least two variants that others have designed, and a few more in the works.
 
